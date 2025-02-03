@@ -45,12 +45,36 @@
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-3JHTT952T1"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    window.dataLayer = window.dataLayer || [];
 
-  gtag('config', 'G-3JHTT952T1');
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-3JHTT952T1');
 </script>
+
+<style>
+
+    #sankey-frame {
+        width: 1600px;
+        height: 1050px;
+    }
+
+    #sankey-frame {
+        -ms-zoom: 0.75;
+        -moz-transform: scale(0.75);
+        -moz-transform-origin: 0 0;
+        -o-transform: scale(0.75);
+        -o-transform-origin: 0 0;
+        -webkit-transform: scale(0.75);
+        -webkit-transform-origin: 0 0;
+    }
+
+
+</style>
 
 <body>
 
@@ -86,7 +110,8 @@
                     <a href="https://www.linkedin.com/in/gabriel-nobel-aa3672187/" target="_blank">Gabriel Nobel</a>,
                   </span>
                         <span class="author-block">
-                    <a href="https://www.linkedin.com/in/ahmed-abdulkadir-2431b814/" target="_blank">Ahmed Abdulkadir</a>,
+                    <a href="https://www.linkedin.com/in/ahmed-abdulkadir-2431b814/"
+                       target="_blank">Ahmed Abdulkadir</a>,
                   </span>
                         <span class="author-block">
                     <a href="https://www.linkedin.com/in/benjamingrewe/" target="_blank">Benjamin F. Grewe</a>,
@@ -115,8 +140,8 @@
                     </span>
 
 
-                    <!-- Github link -->
-                    <span class="link-block">
+                            <!-- Github link -->
+                            <span class="link-block">
                     <a href="https://github.com/sagerpascal/computer-control-agents" target="_blank"
                        class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
@@ -151,7 +176,13 @@
         <div class="hero-body">
             <img src="static/images/main.png" alt="Overview">
             <h2 class="subtitle has-text-centered">
-               <b>(a)</b> An example task for an instruction-based computer control agent: A user specifies a task (propose meeting dates), and the agent executes it.  <b>(b)</b>  We structure the literature on CCAs according to three perspectives corresponding  to the main differentiating aspects: (1) The shared environment properties across  computer domains (e.g., the Web, Android). (2) The means of interaction between  the agent and the environment as manifested in the observation and action spaces. (3)  The agent components: how an agent acts through a policy while tracking the past in memory and how an agent learns to act.
+                <b>(a)</b> An example task for an instruction-based computer control agent: A user specifies a task
+                (propose meeting dates), and the agent executes it. <b>(b)</b> We structure the literature on CCAs
+                according to three perspectives corresponding to the main differentiating aspects: (1) The shared
+                environment properties across computer domains (e.g., the Web, Android). (2) The means of interaction
+                between the agent and the environment as manifested in the observation and action spaces. (3) The agent
+                components: how an agent acts through a policy while tracking the past in memory and how an agent learns
+                to act.
             </h2>
         </div>
     </div>
@@ -166,7 +197,25 @@
                 <h2 class="title is-3">Abstract</h2>
                 <div class="content has-text-justified">
                     <p>
-                        Instruction-based computer control agents (CCAs) execute complex action sequences on personal computers or mobile devices to fulfill tasks using the same graphical user interfaces as a human user would, provided instructions in natural language. This review offers a comprehensive overview of the emerging field of instruction-based computer control, examining available agents -- their taxonomy, development, and respective resources -- and emphasizing the shift from manually designed, specialized agents to leveraging foundation models such as large language models (LLMs) and vision-language models (VLMs). We formalize the problem and establish a taxonomy of the field to analyze agents from three perspectives: (a) the environment perspective, analyzing computer environments; (b) the interaction perspective, describing observations spaces (e.g., screenshots, HTML) and action spaces (e.g., mouse and keyboard actions, executable code); and (c) the agent perspective, focusing on the core principle of how an agent acts and learns to act. Our framework encompasses both specialized and foundation agents, facilitating their comparative analysis and revealing how prior solutions in specialized agents, such as an environment learning step, can guide the development of more capable foundation agents. Additionally, we review current CCA datasets and CCA evaluation methods and outline the challenges to deploying such agents in a productive setting. In total, we review and classify 86 CCAs and 33 related datasets. By highlighting trends, limitations, and future research directions, this work presents a comprehensive foundation to obtain a broad understanding of the field and push its future development.
+                        Instruction-based computer control agents (CCAs) execute complex action sequences on personal
+                        computers or mobile devices to fulfill tasks using the same graphical user interfaces as a human
+                        user would, provided instructions in natural language. This review offers a comprehensive
+                        overview of the emerging field of instruction-based computer control, examining available agents
+                        -- their taxonomy, development, and respective resources -- and emphasizing the shift from
+                        manually designed, specialized agents to leveraging foundation models such as large language
+                        models (LLMs) and vision-language models (VLMs). We formalize the problem and establish a
+                        taxonomy of the field to analyze agents from three perspectives: (a) the environment
+                        perspective, analyzing computer environments; (b) the interaction perspective, describing
+                        observations spaces (e.g., screenshots, HTML) and action spaces (e.g., mouse and keyboard
+                        actions, executable code); and (c) the agent perspective, focusing on the core principle of how
+                        an agent acts and learns to act. Our framework encompasses both specialized and foundation
+                        agents, facilitating their comparative analysis and revealing how prior solutions in specialized
+                        agents, such as an environment learning step, can guide the development of more capable
+                        foundation agents. Additionally, we review current CCA datasets and CCA evaluation methods and
+                        outline the challenges to deploying such agents in a productive setting. In total, we review and
+                        classify 86 CCAs and 33 related datasets. By highlighting trends, limitations, and future
+                        research directions, this work presents a comprehensive foundation to obtain a broad
+                        understanding of the field and push its future development.
                     </p>
                 </div>
             </div>
@@ -183,42 +232,48 @@
             <div id="results-carousel" class="carousel results-carousel">
                 <div class="item">
                     <!-- Your image here -->
-                    <iframe src="static/plots/doa_sankey.html" width="100%" height="550" style="object-fit: cover; margin: auto;"></iframe>
-                    <h2 class="subtitle has-text-centered">
-                        Sankey diagram showing the relations between domains, action spaces, and observation spaces.
-                    </h2>
-                </div>
-                <div class="item">
-                    <!-- Your image here -->
-                    <iframe src="static/plots/domain_dist.html" width="100%" height="550" style="object-fit: cover; margin: auto;"></iframe>
+                    <iframe src="static/plots/domain_dist.html" width="100%" height="850"
+                            style="object-fit: cover; margin: auto;"></iframe>
                     <h2 class="subtitle has-text-centered">
                         Agent distribution per application domain.
                     </h2>
                 </div>
                 <div class="item">
                     <!-- Your image here -->
-                    <iframe src="static/plots/observation_space_dist%203.html" width="100%" height="550" style="object-fit: cover; margin: auto;"></iframe>
+                    <iframe src="static/plots/observation_space_dist.html" width="100%" height="850"
+                            style="object-fit: cover; margin: auto;"></iframe>
                     <h2 class="subtitle has-text-centered">
                         Agent distribution per observation space.
                     </h2>
                 </div>
                 <div class="item">
                     <!-- Your image here -->
-                    <iframe src="static/plots/action_space_dist.html" width="100%" height="550" style="object-fit: cover; margin: auto;"></iframe>
+                    <iframe src="static/plots/observation_space_trend.html" width="100%" height="850"
+                            style="object-fit: cover; margin: auto;"></iframe>
+                    <h2 class="subtitle has-text-centered">
+                        Trends of different observation spaces.
+                    </h2>
+                </div>
+                <div class="item">
+                    <!-- Your image here -->
+                    <iframe src="static/plots/action_space_dist.html" width="100%" height="850"
+                            style="object-fit: cover; margin: auto;"></iframe>
                     <h2 class="subtitle has-text-centered">
                         Agent distribution per action space.
                     </h2>
                 </div>
                 <div class="item">
                     <!-- Your image here -->
-                    <iframe src="static/plots/environment_adaption_dist.html" width="100%" height="550" style="object-fit: cover; margin: auto;"></iframe>
+                    <iframe src="static/plots/environment_adaption_dist.html" width="100%" height="850"
+                            style="object-fit: cover; margin: auto;"></iframe>
                     <h2 class="subtitle has-text-centered">
                         Agent distribution per environment learning strategy.
                     </h2>
                 </div>
                 <div class="item">
                     <!-- Your image here -->
-                    <iframe src="static/plots/environment_adaption_trend%201.html" width="100%" height="550" style="object-fit: cover; margin: auto;"></iframe>
+                    <iframe src="static/plots/environment_adaption_trend.html" width="100%" height="850"
+                            style="object-fit: cover; margin: auto;"></iframe>
                     <h2 class="subtitle has-text-centered">
                         Trends of environment learning strategies.
                     </h2>
@@ -268,10 +323,19 @@
     </div>
 </section>
 
+<section class="hero is-small">
+    <div class="hero-body">
+        <div class="container">
+            <!-- Paper video. -->
+            <h2 class="title is-3">Sankey Diagram</h2>
+            <iframe src="static/plots/doa_sankey.html" id="sankey-frame"></iframe>
+        </div>
+    </div>
+</section>
 
 
 <!--BibTex citation -->
-<section class="section" id="BibTeX">
+<section class="section is-light" id="BibTeX">
     <div class="container is-max-desktop content">
         <h2 class="title">BibTeX</h2>
         <pre><code>@misc{sager_cca_2025,
@@ -297,8 +361,8 @@
                     <p>
                         This page was built using the <a
                             href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic
-                        Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io"
-                                                                                target="_blank">Nerfies</a> project
+                        Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io"
+                                                                                target="_blank">Nerfies</a> project
                         page.
                         You are free to borrow the source code of this website, we just ask that you link back to this
                         page in the footer. <br> This website is licensed under a <a rel="license"
