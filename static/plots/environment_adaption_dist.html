@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@5.20.1"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}, "axis": {"labelFontSize": 16, "titleFontSize": 18}, "legend": {"titleFontSize": 18}, "title": {"fontSize": 20}}, "data": {"name": "data-25606f5a3ea5b9ad963eaf59b16a4e5c"}, "mark": {"type": "bar"}, "encoding": {"color": {"field": "Environment learning", "legend": {"title": null}, "scale": {"domain": ["No environment learning", "Reinforcement learning", "Behavioral cloning", "Long-term memory"], "range": ["#cccccc", "#d55077", "#de85a0", "#e8bbc8"]}, "type": "nominal"}, "opacity": {"condition": {"param": "param_193", "value": 1}, "value": 0.6}, "stroke": {"value": "black"}, "strokeWidth": {"condition": {"param": "param_193", "value": 2, "empty": false}, "value": 0}, "tooltip": [{"field": "Environment learning", "title": "Environment learning", "type": "nominal"}, {"aggregate": "count", "title": "# Publications", "type": "quantitative"}], "x": {"field": "Environment learning", "sort": ["No environment learning", "Reinforcement learning", "Behavioral cloning", "Long-term memory"], "title": null, "type": "nominal"}, "y": {"aggregate": "count", "title": "Number of publications", "type": "quantitative"}}, "height": 600, "params": [{"name": "param_193", "select": {"type": "point", "nearest": false, "on": "mouseover"}}, {"name": "param_194", "select": {"type": "interval", "encodings": ["x", "y"]}, "bind": "scales"}], "title": "Distribution of Environment learning", "width": 800, "$schema": "https://vega.github.io/schema/vega-lite/v5.20.1.json", "datasets": {"data-25606f5a3ea5b9ad963eaf59b16a4e5c": [{"Environment learning": "Behavioral cloning"}, {"Environment learning": "No environment learning"}, {"Environment learning": "No environment learning"}, {"Environment learning": "No environment learning"}, {"Environment learning": "Behavioral cloning"}, {"Environment learning": "No environment learning"}, {"Environment learning": "Long-term memory"}, {"Environment learning": "No environment learning"}, {"Environment learning": "Reinforcement learning"}, {"Environment learning": "No environment learning"}, {"Environment learning": "Behavioral cloning"}, {"Environment learning": "No environment learning"}, {"Environment learning": "No environment learning"}, {"Environment learning": "No environment learning"}, {"Environment learning": "Reinforcement learning"}, {"Environment learning": "Behavioral cloning"}, {"Environment learning": "Behavioral cloning"}, {"Environment learning": "Behavioral cloning"}, {"Environment learning": "Behavioral cloning"}, {"Environment learning": "Reinforcement learning"}, {"Environment learning": "Behavioral cloning"}, {"Environment learning": "Behavioral cloning"}, {"Environment learning": "No environment learning"}, {"Environment learning": "No environment learning"}, {"Environment learning": "Behavioral cloning"}, {"Environment learning": "Long-term memory"}, {"Environment learning": "Behavioral cloning"}, {"Environment learning": "Reinforcement learning"}, {"Environment learning": "No environment learning"}, {"Environment learning": "Long-term memory"}, {"Environment learning": "Reinforcement learning"}, {"Environment learning": "Behavioral cloning"}, {"Environment learning": "Behavioral cloning"}, {"Environment learning": "Behavioral cloning"}, {"Environment learning": "No environment learning"}, {"Environment learning": "Behavioral cloning"}, {"Environment learning": "Behavioral cloning"}, {"Environment learning": "Behavioral cloning"}, {"Environment learning": "No environment learning"}, {"Environment learning": "Behavioral cloning"}, {"Environment learning": "Long-term memory"}, {"Environment learning": "Behavioral cloning"}, {"Environment learning": "No environment learning"}, {"Environment learning": "No environment learning"}, {"Environment learning": "Behavioral cloning"}, {"Environment learning": "Behavioral cloning"}, {"Environment learning": "Reinforcement learning"}, {"Environment learning": "Behavioral cloning"}, {"Environment learning": "No environment learning"}, {"Environment learning": "Reinforcement learning"}, {"Environment learning": "No environment learning"}, {"Environment learning": "No environment learning"}, {"Environment learning": "Behavioral cloning"}, {"Environment learning": "Behavioral cloning"}, {"Environment learning": "Reinforcement learning"}, {"Environment learning": "No environment learning"}, {"Environment learning": "Behavioral cloning"}, {"Environment learning": "Long-term memory"}, {"Environment learning": "Long-term memory"}, {"Environment learning": "Long-term memory"}, {"Environment learning": "Behavioral cloning"}, {"Environment learning": "Long-term memory"}, {"Environment learning": "No environment learning"}, {"Environment learning": "No environment learning"}, {"Environment learning": "No environment learning"}, {"Environment learning": "Long-term memory"}, {"Environment learning": "No environment learning"}, {"Environment learning": "Behavioral cloning"}, {"Environment learning": "Long-term memory"}, {"Environment learning": "No environment learning"}, {"Environment learning": "Long-term memory"}, {"Environment learning": "Behavioral cloning"}, {"Environment learning": "Behavioral cloning"}, {"Environment learning": "No environment learning"}, {"Environment learning": "Long-term memory"}, {"Environment learning": "No environment learning"}, {"Environment learning": "No environment learning"}, {"Environment learning": "Behavioral cloning"}, {"Environment learning": "No environment learning"}, {"Environment learning": "No environment learning"}, {"Environment learning": "No environment learning"}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>

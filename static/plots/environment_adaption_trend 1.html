@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@5.20.1"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "layer": [{"mark": {"type": "area"}, "encoding": {"color": {"field": "Environment adaption", "legend": {"labelFontSize": 16, "title": null, "titleFontSize": 18}, "scale": {"domain": ["Reinforcement learning", "Behavioral cloning", "Long-term memory"], "range": ["#d55077", "#de85a0", "#e8bbc8"]}, "type": "nominal"}, "opacity": {"condition": {"param": "param_449", "value": 1}, "value": 0.6}, "order": {"field": "order_col", "sort": "ascending", "type": "ordinal"}, "stroke": {"value": "black"}, "strokeWidth": {"condition": {"param": "param_449", "value": 2, "empty": false}, "value": 0}, "tooltip": [{"field": "Environment adaption", "title": "Environment adaption", "type": "nominal"}, {"field": "T", "title": "in", "type": "ordinal"}, {"field": "count", "title": "# Publications", "type": "quantitative"}], "x": {"axis": {"labelAngle": -45}, "field": "T", "title": null, "type": "ordinal"}, "y": {"field": "count", "stack": "zero", "title": "Number of publications", "type": "quantitative"}}, "name": "view_130"}, {"mark": {"type": "rule", "color": "red", "strokeWidth": 2}, "encoding": {"color": {"value": "red"}, "opacity": {"condition": {"param": "param_449", "value": 1.0, "empty": false}, "value": 0.0}, "order": {"field": "order_col", "sort": "ascending", "type": "ordinal"}, "x": {"field": "T", "title": null, "type": "nominal"}, "y": {"field": "count", "stack": "zero", "type": "quantitative"}}}], "data": {"name": "data-a807ae04fa41866d8062047276a4d514"}, "height": 300, "params": [{"name": "param_449", "select": {"type": "point", "fields": ["Environment adaption"], "nearest": false, "on": "mouseover"}, "views": ["view_130"]}, {"name": "param_450", "select": {"type": "interval", "encodings": ["x", "y"]}, "bind": "scales", "views": ["view_130"]}], "width": 600, "$schema": "https://vega.github.io/schema/vega-lite/v5.20.1.json", "datasets": {"data-a807ae04fa41866d8062047276a4d514": [{"T": "2020", "Environment adaption": "Behavioral cloning", "count": 2, "order_col": 1}, {"T": "2021", "Environment adaption": "Behavioral cloning", "count": 3, "order_col": 1}, {"T": "2021", "Environment adaption": "Reinforcement learning", "count": 3, "order_col": 0}, {"T": "2022", "Environment adaption": "Behavioral cloning", "count": 5, "order_col": 1}, {"T": "2022", "Environment adaption": "Reinforcement learning", "count": 2, "order_col": 0}, {"T": "2023", "Environment adaption": "Behavioral cloning", "count": 7, "order_col": 1}, {"T": "2023", "Environment adaption": "Long-term memory", "count": 8, "order_col": 2}, {"T": "2023", "Environment adaption": "Reinforcement learning", "count": 1, "order_col": 0}, {"T": "2024", "Environment adaption": "Behavioral cloning", "count": 13, "order_col": 1}, {"T": "2024", "Environment adaption": "Long-term memory", "count": 4, "order_col": 2}, {"T": "2024", "Environment adaption": "Reinforcement learning", "count": 2, "order_col": 0}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>

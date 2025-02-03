@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@5.20.1"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}, "axis": {"labelFontSize": 16, "titleFontSize": 18}, "legend": {"titleFontSize": 18}, "title": {"fontSize": 20}}, "data": {"name": "data-43b00e9b28eee86c965a0aad60d00c59"}, "mark": {"type": "bar"}, "encoding": {"color": {"field": "Action Space", "legend": {"title": null}, "scale": {"domain": ["Mouse/Touch\nand Keyboard", "Direct UI Access", "Task-tailored", "Executable Code"], "range": ["#df5106", "#f67824", "#fda057", "#fdc692"]}, "type": "nominal"}, "opacity": {"condition": {"param": "param_197", "value": 1}, "value": 0.6}, "stroke": {"value": "black"}, "strokeWidth": {"condition": {"param": "param_197", "value": 2, "empty": false}, "value": 0}, "tooltip": [{"field": "Action Space", "title": "Action Space", "type": "nominal"}, {"aggregate": "count", "title": "# Publications", "type": "quantitative"}], "x": {"field": "Action Space", "sort": ["Mouse/Touch\nand Keyboard", "Direct UI Access", "Task-tailored", "Executable Code"], "title": null, "type": "nominal"}, "y": {"aggregate": "count", "title": "Number of publications", "type": "quantitative"}}, "height": 600, "params": [{"name": "param_197", "select": {"type": "point", "nearest": false, "on": "mouseover"}}, {"name": "param_198", "select": {"type": "interval", "encodings": ["x", "y"]}, "bind": "scales"}], "title": "Distribution of Action Space", "width": 800, "$schema": "https://vega.github.io/schema/vega-lite/v5.20.1.json", "datasets": {"data-43b00e9b28eee86c965a0aad60d00c59": [{"Action Space": "Direct UI Access"}, {"Action Space": "Mouse/Touch\nand Keyboard"}, {"Action Space": "Executable Code"}, {"Action Space": "Direct UI Access"}, {"Action Space": "Task-tailored"}, {"Action Space": "Direct UI Access"}, {"Action Space": "Direct UI Access"}, {"Action Space": "Mouse/Touch\nand Keyboard"}, {"Action Space": "Direct UI Access"}, {"Action Space": "Mouse/Touch\nand Keyboard"}, {"Action Space": "Direct UI Access"}, {"Action Space": "Direct UI Access"}, {"Action Space": "Executable Code"}, {"Action Space": "Direct UI Access"}, {"Action Space": "Direct UI Access"}, {"Action Space": "Direct UI Access"}, {"Action Space": "Mouse/Touch\nand Keyboard"}, {"Action Space": "Direct UI Access"}, {"Action Space": "Executable Code"}, {"Action Space": "Direct UI Access"}, {"Action Space": "Executable Code"}, {"Action Space": "Mouse/Touch\nand Keyboard"}, {"Action Space": "Direct UI Access"}, {"Action Space": "Executable Code"}, {"Action Space": "Executable Code"}, {"Action Space": "Direct UI Access"}, {"Action Space": "Direct UI Access"}, {"Action Space": "Direct UI Access"}, {"Action Space": "Mouse/Touch\nand Keyboard"}, {"Action Space": "Mouse/Touch\nand Keyboard"}, {"Action Space": "Mouse/Touch\nand Keyboard"}, {"Action Space": "Mouse/Touch\nand Keyboard"}, {"Action Space": "Direct UI Access"}, {"Action Space": "Direct UI Access"}, {"Action Space": "Direct UI Access"}, {"Action Space": "Direct UI Access"}, {"Action Space": "Direct UI Access"}, {"Action Space": "Direct UI Access"}, {"Action Space": "Direct UI Access"}, {"Action Space": "Direct UI Access"}, {"Action Space": "Direct UI Access"}, {"Action Space": "Direct UI Access"}, {"Action Space": "Direct UI Access"}, {"Action Space": "Direct UI Access"}, {"Action Space": "Mouse/Touch\nand Keyboard"}, {"Action Space": "Direct UI Access"}, {"Action Space": "Mouse/Touch\nand Keyboard"}, {"Action Space": "Direct UI Access"}, {"Action Space": "Mouse/Touch\nand Keyboard"}, {"Action Space": "Direct UI Access"}, {"Action Space": "Direct UI Access"}, {"Action Space": "Direct UI Access"}, {"Action Space": "Direct UI Access"}, {"Action Space": "Direct UI Access"}, {"Action Space": "Direct UI Access"}, {"Action Space": "Direct UI Access"}, {"Action Space": "Direct UI Access"}, {"Action Space": "Task-tailored"}, {"Action Space": "Mouse/Touch\nand Keyboard"}, {"Action Space": "Direct UI Access"}, {"Action Space": "Direct UI Access"}, {"Action Space": "Task-tailored"}, {"Action Space": "Mouse/Touch\nand Keyboard"}, {"Action Space": "Mouse/Touch\nand Keyboard"}, {"Action Space": "Direct UI Access"}, {"Action Space": "Mouse/Touch\nand Keyboard"}, {"Action Space": "Mouse/Touch\nand Keyboard"}, {"Action Space": "Direct UI Access"}, {"Action Space": "Direct UI Access"}, {"Action Space": "Executable Code"}, {"Action Space": "Direct UI Access"}, {"Action Space": "Executable Code"}, {"Action Space": "Direct UI Access"}, {"Action Space": "Direct UI Access"}, {"Action Space": "Executable Code"}, {"Action Space": "Direct UI Access"}, {"Action Space": "Executable Code"}, {"Action Space": "Direct UI Access"}, {"Action Space": "Mouse/Touch\nand Keyboard"}, {"Action Space": "Task-tailored"}, {"Action Space": "Direct UI Access"}, {"Action Space": "Direct UI Access"}, {"Action Space": "Direct UI Access"}, {"Action Space": "Executable Code"}, {"Action Space": "Task-tailored"}, {"Action Space": "Direct UI Access"}, {"Action Space": "Direct UI Access"}, {"Action Space": "Mouse/Touch\nand Keyboard"}, {"Action Space": "Direct UI Access"}, {"Action Space": "Direct UI Access"}, {"Action Space": "Task-tailored"}, {"Action Space": "Direct UI Access"}, {"Action Space": "Executable Code"}, {"Action Space": "Mouse/Touch\nand Keyboard"}, {"Action Space": "Direct UI Access"}, {"Action Space": "Direct UI Access"}, {"Action Space": "Direct UI Access"}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>
