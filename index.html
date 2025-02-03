@@ -172,6 +172,13 @@
             <div id="results-carousel" class="carousel results-carousel">
                 <div class="item">
                     <!-- Your image here -->
+                    <iframe src="static/plots/doa_sankey.html" width="100%" height="550" style="object-fit: cover; margin: auto;"></iframe>
+                    <h2 class="subtitle has-text-centered">
+                        Sankey diagram showing the relations between domains, action spaces, and observation spaces.
+                    </h2>
+                </div>
+                <div class="item">
+                    <!-- Your image here -->
                     <iframe src="static/plots/domain_dist.html" width="100%" height="550" style="object-fit: cover; margin: auto;"></iframe>
                     <h2 class="subtitle has-text-centered">
                         Agent distribution per application domain.
@@ -217,27 +224,33 @@
         <div class="container">
             <!-- Paper video. -->
             <h2 class="title is-3">Agent Overview</h2>
+
+            <a href="static/files/agents.csv" download="agents.csv" class="button m-2">Download CSV</a>
+
             <div class="columns is-centered has-text-centered">
                 <div class="column is-full">
                     <iframe
-                            style="width: 100%; height: 800px; border: none;"
-                            src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ4BU4hI5CMw3gYkVQFvPJC24MnIaH8Rj_YT0DVKqGF677x2m4HSxTY43EeCDiERLqNl4H08BMXqnqs/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+                            style="width: 100%; height: 500px; border: none;"
+                            src="static/tables/agents.html"></iframe>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<section class="hero is-small">
+<section class="hero is-small is-light">
     <div class="hero-body">
         <div class="container">
             <!-- Paper video. -->
             <h2 class="title is-3">Datasets Overview</h2>
+
+            <a href="static/files/datasets.csv" download="datasets.csv" class="button m-2">Download CSV</a>
+
             <div class="columns is-centered has-text-centered">
                 <div class="column is-full">
                     <iframe
-                            style="width: 100%; height: 800px; border: none;"
-                            src="https://docs.google.com/spreadsheets/d/e/2PACX-1vR2RClc_TDxJeNhnCH07Wk4ZWQeI2tx8VTjiH7dD64ms5g4m-k4JcJyKYMx2LwElPNzBwwP2Bwtdsxq/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+                            style="width: 100%; height: 500px; border: none;"
+                            src="static/tables/datasets.html"></iframe>
                 </div>
             </div>
         </div>
