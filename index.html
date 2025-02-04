@@ -73,6 +73,25 @@
         -webkit-transform-origin: 0 0;
     }
 
+    .carousel-plots-frame {
+        width: 500px;
+        height: 400px;
+    }
+
+    .results-carousel {
+    display: flex;
+    justify-content: center; /* Centers items horizontally */
+    align-items: center; /* Centers items vertically */
+    gap: 20px; /* Optional: Adds space between items */
+}
+
+.results-carousel .item {
+    display: flex;
+    flex-direction: column; /* Ensures title and iframe stack properly */
+    align-items: center; /* Centers content inside each item */
+    text-align: center;
+}
+
 
 </style>
 
@@ -230,50 +249,44 @@
     <div class="hero-body">
         <div class="container">
             <div id="results-carousel" class="carousel results-carousel">
-                <div class="item">
+                <div class="item is-align-self-center">
                     <!-- Your image here -->
-                    <iframe src="static/plots/domain_dist.html" width="100%" height="850"
-                            style="object-fit: cover; margin: auto;"></iframe>
+                    <iframe src="static/plots/domain_dist.html" class="carousel-plots-frame"></iframe>
                     <h2 class="subtitle has-text-centered">
                         Agent distribution per application domain.
                     </h2>
                 </div>
-                <div class="item">
+                <div class="item is-align-self-center">
                     <!-- Your image here -->
-                    <iframe src="static/plots/observation_space_dist.html" width="100%" height="850"
-                            style="object-fit: cover; margin: auto;"></iframe>
+                    <iframe src="static/plots/observation_space_dist.html" class="carousel-plots-frame"></iframe>
                     <h2 class="subtitle has-text-centered">
                         Agent distribution per observation space.
                     </h2>
                 </div>
-                <div class="item">
+                <div class="item is-align-self-center">
                     <!-- Your image here -->
-                    <iframe src="static/plots/observation_space_trend.html" width="100%" height="850"
-                            style="object-fit: cover; margin: auto;"></iframe>
+                    <iframe src="static/plots/observation_space_trend.html" class="carousel-plots-frame"></iframe>
                     <h2 class="subtitle has-text-centered">
                         Trends of different observation spaces.
                     </h2>
                 </div>
-                <div class="item">
+                <div class="item is-align-self-center">
                     <!-- Your image here -->
-                    <iframe src="static/plots/action_space_dist.html" width="100%" height="850"
-                            style="object-fit: cover; margin: auto;"></iframe>
+                    <iframe src="static/plots/action_space_dist.html" class="carousel-plots-frame"></iframe>
                     <h2 class="subtitle has-text-centered">
                         Agent distribution per action space.
                     </h2>
                 </div>
-                <div class="item">
+                <div class="item is-align-self-center">
                     <!-- Your image here -->
-                    <iframe src="static/plots/environment_adaption_dist.html" width="100%" height="850"
-                            style="object-fit: cover; margin: auto;"></iframe>
+                    <iframe src="static/plots/environment_adaption_dist.html" class="carousel-plots-frame"></iframe>
                     <h2 class="subtitle has-text-centered">
                         Agent distribution per environment learning strategy.
                     </h2>
                 </div>
-                <div class="item">
+                <div class="item is-align-self-center">
                     <!-- Your image here -->
-                    <iframe src="static/plots/environment_adaption_trend.html" width="100%" height="850"
-                            style="object-fit: cover; margin: auto;"></iframe>
+                    <iframe src="static/plots/environment_adaption_trend.html" class="carousel-plots-frame"></iframe>
                     <h2 class="subtitle has-text-centered">
                         Trends of environment learning strategies.
                     </h2>
@@ -284,6 +297,15 @@
 </section>
 <!-- End image carousel -->
 
+<section class="hero is-small">
+    <div class="hero-body">
+        <div class="container is-align-content-center">
+            <!-- Paper video. -->
+            <h2 class="title is-3">Sankey Diagram</h2>
+            <iframe src="static/plots/doa_sankey.html" id="sankey-frame"></iframe>
+        </div>
+    </div>
+</section>
 
 <section class="hero is-small is-light">
     <div class="hero-body">
@@ -319,16 +341,6 @@
                             src="static/tables/datasets.html"></iframe>
                 </div>
             </div>
-        </div>
-    </div>
-</section>
-
-<section class="hero is-small is-light">
-    <div class="hero-body">
-        <div class="container">
-            <!-- Paper video. -->
-            <h2 class="title is-3">Sankey Diagram</h2>
-            <iframe src="static/plots/doa_sankey.html" id="sankey-frame"></iframe>
         </div>
     </div>
 </section>
