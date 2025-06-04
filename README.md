@@ -1,13 +1,16 @@
 # AI Agents for Computer Use
 
+**WARNING: THIS REPOSITORY IS DEPRECATED! Please visit the new repository at [sagerpascal.github.io/agents-for-computer-use](https://sagerpascal.github.io/agents-for-computer-use)**
+
+
 An awesome list of computer control agents (GUI automation of desktop and mobile devices) 🚀.
 
-Please have a look at our [website](https://sagerpascal.github.io/computer-control-agents) for more information.
+Please have a look at our [website](https://sagerpascal.github.io/agents-for-computer-use) for more information.
 
 ## Repository Contents
 
 - 📄 Paper: Link to Paper ([arXiv.2501.16150](https://doi.org/10.48550/arXiv.2501.16150))
-- 🌐 Website: [https://sagerpascal.github.io/computer-control-agents](https://sagerpascal.github.io/computer-control-agents)
+- 🌐 Website: [https://sagerpascal.github.io/agents-for-computer-use](https://sagerpascal.github.io/agents-for-computer-use)
 - 🤖Agent Overview
 - 📊 Datasets Overview
 
@@ -133,8 +136,8 @@ Please have a look at our [website](https://sagerpascal.github.io/computer-contr
 If helpful, please cite:
 
 ```
-@misc{sager_cca_2025,
-      title={AI Agents for Computer Use: A Review of Instruction-based Computer Control, GUI Automation, and Operator Assistants}, 
+@misc{sager_acu_2025,
+      title={A Comprehensive Survey of Agents for Computer Use: Foundations, Challenges, and Future Directions}, 
       author={Pascal J. Sager and Benjamin Meyer and Peng Yan and Rebekka von Wartburg-Kottler and Layan Etaiwi and Aref Enayati and Gabriel Nobel and Ahmed Abdulkadir and Benjamin F. Grewe and Thilo Stadelmann},
       year={2025},
       eprint={2501.16150},

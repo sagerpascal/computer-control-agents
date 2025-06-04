@@ -5,10 +5,10 @@
     <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
     <!-- Replace the content tag with appropriate information -->
     <meta name="description"
-          content="AI Agents for Computer Use: A Review of Instruction-based Computer Control, GUI Automation, and Operator Assistants">
-    <meta property="og:title" content="AI Agents for Computer Use"/>
+          content="A Comprehensive Survey of Agents for Computer Use: Foundations, Challenges, and Future Directions">
+    <meta property="og:title" content="Agents for Computer Use"/>
     <meta property="og:description"
-          content="AI Agents for Computer Use: A Review of Instruction-based Computer Control, GUI Automation, and Operator Assistants"/>
+          content="A Comprehensive Survey of Agents for Computer Use: Foundations, Challenges, and Future Directions"/>
     <meta property="og:url" content="https://sagerpascal.github.io/computer-control-agents"/>
     <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
     <meta property="og:image" content="static/image/cca_banner.png"/>
@@ -21,7 +21,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-    <title>Computer Control Agents</title>
+    <title>Agents for Computer Use</title>
     <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
     <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
           rel="stylesheet">
@@ -93,8 +93,7 @@
         <div class="container is-max-desktop">
             <div class="columns is-centered">
                 <div class="column has-text-centered">
-                    <h1 class="title is-1 publication-title">AI Agents for Computer Use: A Review of Instruction-based
-                        Computer Control, GUI Automation, and Operator Assistants</h1>
+                    <h1 class="title is-1 publication-title">A Comprehensive Survey of Agents for Computer Use: Foundations, Challenges, and Future Directions</h1>
                     <div class="is-size-5 publication-authors">
                         <!-- Paper authors -->
                         <span class="author-block">
@@ -131,7 +130,7 @@
                     </div>
 
                     <div class="is-size-5 publication-authors">
-                        <span class="author-block">Zurich University of Applied Sciences | University of Zurich | ETH Zurich<br>ArXiv 2025</span>
+                        <span class="author-block">Zurich University of Applied Sciences | University of Zurich | ETH Zurich | AlpineAI AG<br>ArXiv 2025</span>
                         <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
                     </div>
 
@@ -185,13 +184,11 @@
         <div class="hero-body">
             <img src="static/images/main.png" alt="Overview">
             <h2 class="subtitle has-text-centered">
-                <b>(a)</b> An example task for an instruction-based computer control agent: A user specifies a task
-                (propose meeting dates), and the agent executes it. <b>(b)</b> We structure the literature on CCAs
-                according to three perspectives corresponding to the main differentiating aspects: (1) The shared
-                environment properties across computer domains (e.g., the Web, Android). (2) The means of interaction
-                between the agent and the environment as manifested in the observation and action spaces. (3) The agent
-                components: how an agent acts through a policy while tracking the past in memory and how an agent learns
-                to act.
+                Overview: (a) An example of a task for an agent for computer use (ACU): A user specifies a task ("propose meeting dates by email") and the agent executes it.
+(b) We structure the literature on ACUs based on three key <i>perspectives</i> corresponding to the main differentiating aspects:
+(1) The shared <i>domain</i> properties across computer environments (e.g., Web, Android).
+(2) The means of <i>interaction</i> between the agent and the environment as manifested in the observation and action spaces.
+(3) The <i>agent</i> components: how an agent acts through a policy while tracking the past in memory and how an agent learns to act.
             </h2>
         </div>
     </div>
@@ -206,25 +203,26 @@
                 <h2 class="title is-3">Abstract</h2>
                 <div class="content has-text-justified">
                     <p>
-                        Instruction-based computer control agents (CCAs) execute complex action sequences on personal
-                        computers or mobile devices to fulfill tasks using the same graphical user interfaces as a human
-                        user would, provided instructions in natural language. This review offers a comprehensive
-                        overview of the emerging field of instruction-based computer control, examining available agents
-                        -- their taxonomy, development, and respective resources -- and emphasizing the shift from
-                        manually designed, specialized agents to leveraging foundation models such as large language
-                        models (LLMs) and vision-language models (VLMs). We formalize the problem and establish a
-                        taxonomy of the field to analyze agents from three perspectives: (a) the environment
-                        perspective, analyzing computer environments; (b) the interaction perspective, describing
-                        observations spaces (e.g., screenshots, HTML) and action spaces (e.g., mouse and keyboard
-                        actions, executable code); and (c) the agent perspective, focusing on the core principle of how
-                        an agent acts and learns to act. Our framework encompasses both specialized and foundation
-                        agents, facilitating their comparative analysis and revealing how prior solutions in specialized
-                        agents, such as an environment learning step, can guide the development of more capable
-                        foundation agents. Additionally, we review current CCA datasets and CCA evaluation methods and
-                        outline the challenges to deploying such agents in a productive setting. In total, we review and
-                        classify 86 CCAs and 33 related datasets. By highlighting trends, limitations, and future
-                        research directions, this work presents a comprehensive foundation to obtain a broad
-                        understanding of the field and push its future development.
+                        <p>
+                        <b>Background</b>:
+                        Agents for computer use (ACUs) are systems that execute complex tasks on digital devices -- such as personal computers or mobile phones -- given instructions in natural language. These agents automate tasks by controlling software through low-level actions like mouse clicks and touchscreen gestures. However, despite rapid progress, ACUs are not yet mature for everyday use.
+                        </p>
+                        <p>
+                        <b>Objectives</b>:
+                        This survey examines the current state-of-the-art, identifies trends, and points out research gaps in the development of practical ACUs. The goal is to provide a comprehensive review and analysis that helps advance general-purpose, robust, and scalable agents for real-world computer use.
+                        </p>
+                        <p>
+                        <b>Methods</b>:
+                         We introduce a multifaceted taxonomy of ACUs across three dimensions: (I) the <i>domain perspective</i>, characterizing the contexts in which agents operate; (II) the <i>interaction perspective</i>, describing observation modalities (e.g., screenshots, HTML) and action modalities (e.g., mouse, keyboard, code execution); and (III) the <i>agent perspective</i>, detailing how agents perceive, reason, and learn. We review 87 original research papers about ACUs and 33 relevant datasets, covering both foundation model-based and specialized approaches.
+                        </p>
+                        <p>
+                        <b>Results</b>:
+                        Our taxonomy comprehensively structures state-of-the-art approaches and establishes the groundwork for guiding future ACU research. We found that the field is transitioning from specialized agents toward foundation-model-based agents, a shift from text to image-based observation space, and an increasing adoption of behavior cloning methodologies. Furthermore, we identify six key research gaps: insufficient generalization, inefficient learning, limited planning, low task complexity in benchmarks, non-standardized evaluation, and a disconnect between research and practical conditions.
+                        </p>
+                        <p>
+                        <b> Conclusions</b>:
+                        To continue rapid improvements in the field, we recommend focusing on: (a) vision-based observations and low-level control to enhance generalization; (b) adaptive learning beyond static prompting; (c) effective planning and reasoning capabilities; (d) realistic, high-complexity benchmarks; (e) standardized evaluation criteria based on task success; and (f) aligning agent design with real-world deployment constraints. Collectively, our findings and proposed directions help develop more general-purpose agents for everyday digital tasks.
+                        </p>
                     </p>
                 </div>
             </div>
@@ -340,8 +338,8 @@
 <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
         <h2 class="title">BibTeX</h2>
-        <pre><code>@misc{sager_cca_2025,
-      title={AI Agents for Computer Use: A Review of Instruction-based Computer Control, GUI Automation, and Operator Assistants},
+        <pre><code>@misc{sager_acu_2025,
+      title={A Comprehensive Survey of Agents for Computer Use: Foundations, Challenges, and Future Directions},
       author={Pascal J. Sager and Benjamin Meyer and Peng Yan and Rebekka von Wartburg-Kottler and Layan Etaiwi and Aref Enayati and Gabriel Nobel and Ahmed Abdulkadir and Benjamin F. Grewe and Thilo Stadelmann},
       year={2025},
       eprint={2501.16150},
